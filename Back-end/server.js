@@ -1,4 +1,5 @@
 //Backend server for facereco App 
+//Created by Osama Namur
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -124,6 +125,6 @@ app.put('/image',(req,res) => {
 	}).catch(err => res.status(400).json('unable to get count'))
 })
 
-app.listen(3001,()=>{
+app.listen(process.env || 3001,()=>{
 	console.log('app is running');
 })
