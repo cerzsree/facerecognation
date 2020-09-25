@@ -8,7 +8,7 @@
   "private": true,
   "dependencies": {
     "clarifai": "^2.9.0",
-    "knex": "^0.16.5",
+    "knex": "^0.19.5",
     "particles.js": "^2.0.0",
     "pg": "^7.10.0",
     "react": "^16.8.6",
