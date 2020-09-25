@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Created by Osama Namur
+
 class Registerform extends React.Component {
 	constructor(props){
 		super(props);
@@ -24,7 +26,7 @@ class Registerform extends React.Component {
 
 	onSubmitRegister = () => {
 		console.log('register');
-		fetch('http://localhost:3001/register',{
+		fetch('https://intense-depths-42987.herokuapp.com/register',{
 			method:'post',
 			headers:{'Content-type':'application/json'},
 			body: JSON.stringify({
@@ -73,7 +75,7 @@ class Registerform extends React.Component {
 					    <input onClick={this.onSubmitRegister} className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Register" />
 				    </div>
 				    <div className="lh-copy mt3">
-					    <p className="f6 link dim black db">Already have an account?Sign in</p>
+					    <p className="f6 link dim black db pointer" onClick={()=>{this.props.onRoutChange('signin')}}>Already have an account?Sign in</p>
 				    </div>
 				</div>
 			</main>
